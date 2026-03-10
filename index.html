@@ -421,5 +421,17 @@
         </footer>
     </div>
 <script data-goatcounter="https://borjamir.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+document.querySelectorAll('.download-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        if (window.goatcounter) {
+            window.goatcounter.count({
+                path: 'download:' + this.href.split('/').pop(),
+                event: true
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
